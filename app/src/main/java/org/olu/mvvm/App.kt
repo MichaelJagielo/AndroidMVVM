@@ -37,7 +37,6 @@ class App : Application() {
         retrofit = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .baseUrl("https://randomapi.com/api/")
                 .build()
 
         userApi = retrofit.create(UserApi::class.java)
